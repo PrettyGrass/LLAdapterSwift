@@ -8,6 +8,7 @@
 
 import UIKit
 
-class LLCollectionViewReusablecell: LLCollectionCell {
+public class LLCollectionViewReusableCell: LLCollectionCell {
     
+
 }

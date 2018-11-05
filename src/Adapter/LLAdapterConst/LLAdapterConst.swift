@@ -37,6 +37,7 @@ public enum LLTableViewCellSeparatorStyle: Int {
     case none, inner, custom
 }
 
-
 //点击事件
-public typealias TableViewCellClick = (LLTableCell,NSIndexPath) -> Void
+public typealias TableViewCellClick = (LLTableCell,IndexPath) -> Void
+
+public typealias CollectionCellClick = (LLCollectionCell,IndexPath) -> Void

@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-extension UITableViewCell {
+@objc extension UITableViewCell {
     private struct AssociatedKeys {
         static var CellModelKey = "CellModelKey"
     }
@@ -22,7 +22,7 @@ extension UITableViewCell {
             ll_updateUI()
         }
     }
-   public func ll_updateUI() {
+ open func ll_updateUI() {
         if let ext = ll_model?.kvcExt {
             for val in ext {
                 self.setValue(val.value, forKeyPath: val.key)
@@ -66,9 +66,7 @@ extension UITableViewCell {
             
         default:
             separatorView?.removeFromSuperview()
-        }
-        
+        }        
     }
-
 }
 

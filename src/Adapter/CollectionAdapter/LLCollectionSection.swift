@@ -8,23 +8,18 @@
 
 import UIKit
 
-class LLCollectionSection: LLSectionProtocol {
+public class LLCollectionSection: LLSectionProtocol {
     
+    public typealias LLSectionHeaderType = LLCollectionViewReusableCell
+    public typealias LLSectionFooterType = LLCollectionViewReusableCell
+    public typealias LLCellType = LLCollectionCell
     
-    typealias LLSectionHeaderType = UICollectionReusableView
-    typealias LLSectionFooterType = UICollectionReusableView
+    public var cells: [LLCollectionCell] = []
     
-    typealias LLCellType = LLCollectionCell
+    public var sectionHeaderView: LLCollectionViewReusableCell?
+    public var sectionFooterView: LLCollectionViewReusableCell?
     
-    var cells: [LLCollectionCell] = []
-    
-    var sectionHeaderView: UICollectionReusableView?
-    var sectionFooterView: UICollectionReusableView?
-    
-    var sectionHeaderCell: LLCollectionViewReusablecell?
-    var sectionFooterCell: LLCollectionViewReusablecell?
-    
-    var sectionIndex: Int?
+    public var sectionIndex: Int?
     
     public func addCell(cell: LLCollectionCell) {
         cells.append(cell)
@@ -57,6 +52,5 @@ class LLCollectionSection: LLSectionProtocol {
     
     public func buildAddCell(CellClass clazz: AnyClass) -> LLCollectionCell {
         return LLCollectionCell()
-        
     }
 }

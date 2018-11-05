@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public protocol LLAdapterProtocol{
+public protocol LLAdapterProtocol {
     
     associatedtype SectionType
     /// 获取适配器中所有组
@@ -19,7 +19,7 @@ public protocol LLAdapterProtocol{
     
      func buildAddNewSection() -> SectionType
     
-    //func buildAddNewSection<T: LLSectionProtocol>(Clazz clazz: AnyClass) -> T;
+    func buildAddNewSection(Cell cell: SectionType) -> Void;
     
      func addSection(Section section: SectionType) -> Void;
     
@@ -65,7 +65,7 @@ public protocol LLSectionProtocol {
      func buildAddCell(CellClass clazz: AnyClass) -> LLCellType
 }
 
-public protocol LLAdapterCellProtocol {
+protocol LLAdapterCellProtocol {
     /// 数据: 支持结构体,枚举等任何类型
      var data :Any? {get set}
     /// kvc 透传数据
@@ -80,5 +80,6 @@ public protocol LLAdapterCellProtocol {
      var cellNibName: String?  {get set}
     /// cell加载类型
      var loadType: LLCellLoadType  {get set}
+    
 }
 

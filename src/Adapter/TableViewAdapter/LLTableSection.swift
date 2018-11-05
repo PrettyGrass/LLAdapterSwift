@@ -10,50 +10,51 @@ import UIKit
 
 public class LLTableSection: LLSectionProtocol {
     
-    public typealias LLSectionHeaderType = UIView
-    public typealias LLSectionFooterType = UIView
+    public typealias LLSectionHeaderType = LLTableSectionReusableCell
+    public typealias LLSectionFooterType = LLTableSectionReusableCell
     public typealias LLCellType = LLTableCell
-    
-    public var sectionHeaderView: UIView?
-    public var sectionFooterView: UIView?
-    
-    public var sectionHeaderViewHeight: CGFloat = 0
-    public var sectionFooterViewHeight: CGFloat = 0
-    
+
+    public var sectionHeaderView: LLTableSectionReusableCell?
+    public var sectionFooterView: LLTableSectionReusableCell?
+
     public var cells: [LLTableCell] = []
     public var sectionIndex: Int?
-    
+
     public var sectionHeaderTitle: String?
     public var sectionFooterTitle: String?
     
+    required public init() {
+        
+    }
+
     public func addCell(cell: LLTableCell) {
         cells.append(cell)
     }
-    
+
     public func addCell(TargetCell cell: LLTableCell, index: Int) {
         cells.insert(cell, at: index)
     }
-    
+
     public func remove(TargetCell cell: LLTableCell) {
-        #warning ("可以用fillter尝试过滤")
-        for (index , obj) in cells.enumerated() {
-            if (obj === cell) {
+        #warning("可以用fillter尝试过滤")
+        for (index, obj) in cells.enumerated() {
+            if obj === cell {
                 cells.remove(at: index)
             }
         }
     }
-    
+
     public func remove(AtIndex index: Int) {
         cells.remove(at: index)
     }
-    
+
     public func buildAddCell() -> LLTableCell {
         let cell = LLTableCell()
         addCell(cell: cell)
         return cell
     }
-    
-    public func buildAddCell(CellClass clazz: AnyClass) -> LLTableCell {
+
+    public func buildAddCell(CellClass _: AnyClass) -> LLTableCell {
         return LLTableCell()
     }
 }

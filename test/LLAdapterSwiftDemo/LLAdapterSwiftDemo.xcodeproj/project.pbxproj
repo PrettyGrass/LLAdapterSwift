@@ -8,11 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		B1DB1180D84E154A7BC289C4 /* Pods_LLAdapterSwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12A8F3E48E84B84BE5B60EE8 /* Pods_LLAdapterSwiftDemo.framework */; };
+		F30E5C80219037E900D3C57F /* TableViewDemo1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30E5C7E219037E900D3C57F /* TableViewDemo1.swift */; };
+		F30E5C81219037E900D3C57F /* TableViewDemo1.xib in Resources */ = {isa = PBXBuildFile; fileRef = F30E5C7F219037E900D3C57F /* TableViewDemo1.xib */; };
+		F30E5C8421903BB500D3C57F /* CollectionViewDemo1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30E5C8221903BB500D3C57F /* CollectionViewDemo1.swift */; };
+		F30E5C8721903C2B00D3C57F /* CollectionViewDemo1.xib in Resources */ = {isa = PBXBuildFile; fileRef = F30E5C8621903C2B00D3C57F /* CollectionViewDemo1.xib */; };
+		F30E5C8B2190435A00D3C57F /* CollectionCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30E5C892190435A00D3C57F /* CollectionCell1.swift */; };
+		F30E5C8C2190435A00D3C57F /* CollectionCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = F30E5C8A2190435A00D3C57F /* CollectionCell1.xib */; };
+		F30E5C9021904B4B00D3C57F /* TableCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30E5C8E21904B4B00D3C57F /* TableCell1.swift */; };
+		F30E5C9121904B4B00D3C57F /* TableCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = F30E5C8F21904B4B00D3C57F /* TableCell1.xib */; };
+		F30E5C9321904B6B00D3C57F /* TableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30E5C9221904B6B00D3C57F /* TableHeaderView.swift */; };
+		F30E5C9521904BAB00D3C57F /* TableFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30E5C9421904BAB00D3C57F /* TableFooterView.swift */; };
+		F30E5C9821904BF300D3C57F /* TableViewDemo2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30E5C9621904BF300D3C57F /* TableViewDemo2.swift */; };
+		F30E5C9921904BF300D3C57F /* TableViewDemo2.xib in Resources */ = {isa = PBXBuildFile; fileRef = F30E5C9721904BF300D3C57F /* TableViewDemo2.xib */; };
+		F30E5C9E219061C200D3C57F /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30E5C9C219061C200D3C57F /* CollectionHeaderView.swift */; };
+		F30E5C9F219061C200D3C57F /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F30E5C9D219061C200D3C57F /* CollectionHeaderView.xib */; };
+		F30E5CA22190620500D3C57F /* CollectionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30E5CA02190620500D3C57F /* CollectionFooterView.swift */; };
+		F30E5CA32190620500D3C57F /* CollectionFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F30E5CA12190620500D3C57F /* CollectionFooterView.xib */; };
 		F327F17321899F03002B502D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F327F17221899F03002B502D /* AppDelegate.swift */; };
 		F327F17521899F03002B502D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F327F17421899F03002B502D /* ViewController.swift */; };
 		F327F17821899F03002B502D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F327F17621899F03002B502D /* Main.storyboard */; };
 		F327F17A21899F04002B502D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F327F17921899F04002B502D /* Assets.xcassets */; };
 		F327F17D21899F04002B502D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F327F17B21899F04002B502D /* LaunchScreen.storyboard */; };
+		F37B2E93218FD293006C7E01 /* ImportHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37B2E92218FD293006C7E01 /* ImportHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +39,22 @@
 		55253E8FC22B8D626B848242 /* Pods-LLAdapterSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLAdapterSwift.release.xcconfig"; path = "Target Support Files/Pods-LLAdapterSwift/Pods-LLAdapterSwift.release.xcconfig"; sourceTree = "<group>"; };
 		B3E638117007BD0811527B84 /* Pods_LLAdapterSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LLAdapterSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5F516C0CE027125F514E71 /* Pods-LLAdapterSwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLAdapterSwiftDemo.debug.xcconfig"; path = "Target Support Files/Pods-LLAdapterSwiftDemo/Pods-LLAdapterSwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		F30E5C7E219037E900D3C57F /* TableViewDemo1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDemo1.swift; sourceTree = "<group>"; };
+		F30E5C7F219037E900D3C57F /* TableViewDemo1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewDemo1.xib; sourceTree = "<group>"; };
+		F30E5C8221903BB500D3C57F /* CollectionViewDemo1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDemo1.swift; sourceTree = "<group>"; };
+		F30E5C8621903C2B00D3C57F /* CollectionViewDemo1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewDemo1.xib; sourceTree = "<group>"; };
+		F30E5C892190435A00D3C57F /* CollectionCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCell1.swift; sourceTree = "<group>"; };
+		F30E5C8A2190435A00D3C57F /* CollectionCell1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionCell1.xib; sourceTree = "<group>"; };
+		F30E5C8E21904B4B00D3C57F /* TableCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell1.swift; sourceTree = "<group>"; };
+		F30E5C8F21904B4B00D3C57F /* TableCell1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableCell1.xib; sourceTree = "<group>"; };
+		F30E5C9221904B6B00D3C57F /* TableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHeaderView.swift; sourceTree = "<group>"; };
+		F30E5C9421904BAB00D3C57F /* TableFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableFooterView.swift; sourceTree = "<group>"; };
+		F30E5C9621904BF300D3C57F /* TableViewDemo2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDemo2.swift; sourceTree = "<group>"; };
+		F30E5C9721904BF300D3C57F /* TableViewDemo2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewDemo2.xib; sourceTree = "<group>"; };
+		F30E5C9C219061C200D3C57F /* CollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
+		F30E5C9D219061C200D3C57F /* CollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
+		F30E5CA02190620500D3C57F /* CollectionFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionFooterView.swift; sourceTree = "<group>"; };
+		F30E5CA12190620500D3C57F /* CollectionFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionFooterView.xib; sourceTree = "<group>"; };
 		F327F16F21899F03002B502D /* LLAdapterSwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LLAdapterSwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F327F17221899F03002B502D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F327F17421899F03002B502D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,6 +62,7 @@
 		F327F17921899F04002B502D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F327F17C21899F04002B502D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F327F17E21899F04002B502D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F37B2E92218FD293006C7E01 /* ImportHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +97,30 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		F30E5C8821903CB200D3C57F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F30E5C892190435A00D3C57F /* CollectionCell1.swift */,
+				F30E5C8A2190435A00D3C57F /* CollectionCell1.xib */,
+				F30E5C9C219061C200D3C57F /* CollectionHeaderView.swift */,
+				F30E5C9D219061C200D3C57F /* CollectionHeaderView.xib */,
+				F30E5CA02190620500D3C57F /* CollectionFooterView.swift */,
+				F30E5CA12190620500D3C57F /* CollectionFooterView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F30E5C8D21904AE700D3C57F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F30E5C8E21904B4B00D3C57F /* TableCell1.swift */,
+				F30E5C8F21904B4B00D3C57F /* TableCell1.xib */,
+				F30E5C9221904B6B00D3C57F /* TableHeaderView.swift */,
+				F30E5C9421904BAB00D3C57F /* TableFooterView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F327F16621899F03002B502D = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +142,9 @@
 		F327F17121899F03002B502D /* LLAdapterSwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F37B2E91218FD289006C7E01 /* Const */,
+				F37B2E86218FD06D006C7E01 /* CollectViewAdapterDemo */,
+				F37B2E85218FD05F006C7E01 /* TableViewAdapterDemo */,
 				F327F17221899F03002B502D /* AppDelegate.swift */,
 				F327F17421899F03002B502D /* ViewController.swift */,
 				F327F17621899F03002B502D /* Main.storyboard */,
@@ -92,6 +153,36 @@
 				F327F17E21899F04002B502D /* Info.plist */,
 			);
 			path = LLAdapterSwiftDemo;
+			sourceTree = "<group>";
+		};
+		F37B2E85218FD05F006C7E01 /* TableViewAdapterDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F30E5C8D21904AE700D3C57F /* View */,
+				F30E5C7E219037E900D3C57F /* TableViewDemo1.swift */,
+				F30E5C7F219037E900D3C57F /* TableViewDemo1.xib */,
+				F30E5C9621904BF300D3C57F /* TableViewDemo2.swift */,
+				F30E5C9721904BF300D3C57F /* TableViewDemo2.xib */,
+			);
+			path = TableViewAdapterDemo;
+			sourceTree = "<group>";
+		};
+		F37B2E86218FD06D006C7E01 /* CollectViewAdapterDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F30E5C8821903CB200D3C57F /* View */,
+				F30E5C8221903BB500D3C57F /* CollectionViewDemo1.swift */,
+				F30E5C8621903C2B00D3C57F /* CollectionViewDemo1.xib */,
+			);
+			path = CollectViewAdapterDemo;
+			sourceTree = "<group>";
+		};
+		F37B2E91218FD289006C7E01 /* Const */ = {
+			isa = PBXGroup;
+			children = (
+				F37B2E92218FD293006C7E01 /* ImportHeader.swift */,
+			);
+			path = Const;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,8 +245,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F30E5C81219037E900D3C57F /* TableViewDemo1.xib in Resources */,
+				F30E5C9121904B4B00D3C57F /* TableCell1.xib in Resources */,
 				F327F17D21899F04002B502D /* LaunchScreen.storyboard in Resources */,
 				F327F17A21899F04002B502D /* Assets.xcassets in Resources */,
+				F30E5C8C2190435A00D3C57F /* CollectionCell1.xib in Resources */,
+				F30E5C9F219061C200D3C57F /* CollectionHeaderView.xib in Resources */,
+				F30E5C9921904BF300D3C57F /* TableViewDemo2.xib in Resources */,
+				F30E5CA32190620500D3C57F /* CollectionFooterView.xib in Resources */,
+				F30E5C8721903C2B00D3C57F /* CollectionViewDemo1.xib in Resources */,
 				F327F17821899F03002B502D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,16 +266,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-LLAdapterSwiftDemo/Pods-LLAdapterSwiftDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/LLAdapterSwift/LLAdapterSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LLAdapterSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -192,15 +286,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-LLAdapterSwiftDemo-checkManifestLockResult.txt",
 			);
@@ -216,8 +306,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F30E5C9521904BAB00D3C57F /* TableFooterView.swift in Sources */,
+				F30E5C9E219061C200D3C57F /* CollectionHeaderView.swift in Sources */,
+				F37B2E93218FD293006C7E01 /* ImportHeader.swift in Sources */,
+				F30E5C8B2190435A00D3C57F /* CollectionCell1.swift in Sources */,
+				F30E5C9821904BF300D3C57F /* TableViewDemo2.swift in Sources */,
+				F30E5C9021904B4B00D3C57F /* TableCell1.swift in Sources */,
+				F30E5C8421903BB500D3C57F /* CollectionViewDemo1.swift in Sources */,
 				F327F17521899F03002B502D /* ViewController.swift in Sources */,
+				F30E5C80219037E900D3C57F /* TableViewDemo1.swift in Sources */,
 				F327F17321899F03002B502D /* AppDelegate.swift in Sources */,
+				F30E5C9321904B6B00D3C57F /* TableHeaderView.swift in Sources */,
+				F30E5CA22190620500D3C57F /* CollectionFooterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

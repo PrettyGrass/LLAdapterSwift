@@ -8,13 +8,13 @@
 
 import UIKit
 
-class LLCollectionCell: LLAdapterCellProtocol {
+public class LLCollectionCell: NSObject,LLAdapterCellProtocol {
     
-    var cellClazz: AnyClass = UICollectionViewCell.self
+    public var cellClazz: AnyClass = UICollectionViewCell.self
     
     private var _cellIdentity :String?
     
-    var cellIdentity: String {
+    public var cellIdentity: String {
         get {
             if let id = _cellIdentity {
                 return id
@@ -25,14 +25,28 @@ class LLCollectionCell: LLAdapterCellProtocol {
         }
     }
     
-    var data: Any?
+    public var data: Any?
     
-    var kvcExt: [String : Any]?
+    public var kvcExt: [String : Any]?
     
-    var indexPath: IndexPath?
+    public var indexPath: IndexPath?
     
-    var cellNibName: String?
+    public var cellNibName: String?
     
-    var loadType: LLCellLoadType = LLCellLoadType.origin
+    public var loadType: LLCellLoadType = LLCellLoadType.origin
+    
+    /// 图片名字或者URL
+    public var image: Any?
+    /// 标题
+    public var title = "";
+    /// 子标题
+    public var subTitle = "";
+    
+    public var deSelectionStyle = LLDeSelectionStyle.none
+    
+    /// item大小
+    public var itemSize: CGSize = CGSize.zero
+    
+    public var cellClick :CollectionCellClick?
     
 }
