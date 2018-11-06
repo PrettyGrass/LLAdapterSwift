@@ -8,57 +8,30 @@
 
 import UIKit
 
-class TableViewDemo2: UITableViewController {
+class TableViewDemo2: BaseListViewController,UITableViewDelegate {
     
-    var adapter: LLTableViewAdapter?
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        configTab()
+        title = "滚动事件传递"
     }
     
-    func configTab() -> Void {
-        
-        adapter = LLTableViewAdapter(TableView: tableView)
-        let section1 = adapter!.buildAddNewSection()
-        
-        let headerCell = LLTableSectionReusableCell()
-        headerCell.cellClazz = TableHeaderView.self
-        headerCell.cellHeight = 40
-        
-        let footerCell = LLTableSectionReusableCell()
-        footerCell.cellClazz = TableFooterView.self
-        footerCell.cellHeight = 30
-        
-        section1.sectionHeaderView = headerCell
-        section1.sectionFooterView = footerCell
-
-        let cell1 = _creatCell(Section: section1, cellHeight:100, text: "第一组:cell1")
-        cell1.separatorInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-        cell1.accessoryType = UITableViewCell.AccessoryType.checkmark
-        
-        let section2 = adapter!.buildAddNewSection()
-        section2.sectionHeaderView = headerCell
-        section2.sectionFooterView = footerCell
-        
-        let cell2 = _creatCell(Section: section2, cellHeight:150, text: "第二组:cell1")
-        cell2.separatorInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 10)
-        cell2.accessoryType = UITableViewCell.AccessoryType.detailButton
-        adapter?.reloadData()
-    }
-    
-    func _creatCell(Section: LLTableSection, cellHeight: CGFloat , text: String) -> LLTableCell {
-        let cell = Section.buildAddCell()
-        cell.cellHeight = cellHeight
-        cell.cellClazz = TableCell1.self
-        cell.loadType = .nib
-        cell.cellNibName = "TableCell1"
-        cell.text = text
-        cell.separatorStyle = .inner
-        cell.cellClick = {(cell,indexPath) in
-            self.adapter?.reloadData()
+    override func configCells() {
+        let section = adapter!.buildAddNewSection()
+        for _ in 0...100 {
+            AdapterUtil.creatCell(section: section, text: "cell") { (cell, indexPath) in
+            }
         }
-        return cell
+        adapter?.reloadData()
+        
+        //设置tableViewDelegate 可以回调scrollerDelegate事件,以及部分tableView代理事件
+        adapter?.tableViewDelegate = self
+    }
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print("scrollViewDidScroll.......")
     }
     
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        print("scrollViewDidEndDecelerating")
+    }
 }

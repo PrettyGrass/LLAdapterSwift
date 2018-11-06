@@ -19,7 +19,6 @@
 		F30E5C9321904B6B00D3C57F /* TableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30E5C9221904B6B00D3C57F /* TableHeaderView.swift */; };
 		F30E5C9521904BAB00D3C57F /* TableFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30E5C9421904BAB00D3C57F /* TableFooterView.swift */; };
 		F30E5C9821904BF300D3C57F /* TableViewDemo2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30E5C9621904BF300D3C57F /* TableViewDemo2.swift */; };
-		F30E5C9921904BF300D3C57F /* TableViewDemo2.xib in Resources */ = {isa = PBXBuildFile; fileRef = F30E5C9721904BF300D3C57F /* TableViewDemo2.xib */; };
 		F30E5C9E219061C200D3C57F /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30E5C9C219061C200D3C57F /* CollectionHeaderView.swift */; };
 		F30E5C9F219061C200D3C57F /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F30E5C9D219061C200D3C57F /* CollectionHeaderView.xib */; };
 		F30E5CA22190620500D3C57F /* CollectionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30E5CA02190620500D3C57F /* CollectionFooterView.swift */; };
@@ -37,6 +36,7 @@
 		F36B731B219195230078A5E0 /* CollectionViewDemo3.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36B7319219195230078A5E0 /* CollectionViewDemo3.swift */; };
 		F36B731C219195230078A5E0 /* CollectionViewDemo3.xib in Resources */ = {isa = PBXBuildFile; fileRef = F36B731A219195230078A5E0 /* CollectionViewDemo3.xib */; };
 		F36B731F219195D40078A5E0 /* CustomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36B731E219195D40078A5E0 /* CustomFlowLayout.swift */; };
+		F36B73222191A1400078A5E0 /* TableViewDemoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36B73212191A1400078A5E0 /* TableViewDemoList.swift */; };
 		F37B2E93218FD293006C7E01 /* ImportHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37B2E92218FD293006C7E01 /* ImportHeader.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,7 +58,6 @@
 		F30E5C9221904B6B00D3C57F /* TableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHeaderView.swift; sourceTree = "<group>"; };
 		F30E5C9421904BAB00D3C57F /* TableFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableFooterView.swift; sourceTree = "<group>"; };
 		F30E5C9621904BF300D3C57F /* TableViewDemo2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDemo2.swift; sourceTree = "<group>"; };
-		F30E5C9721904BF300D3C57F /* TableViewDemo2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewDemo2.xib; sourceTree = "<group>"; };
 		F30E5C9C219061C200D3C57F /* CollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
 		F30E5C9D219061C200D3C57F /* CollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
 		F30E5CA02190620500D3C57F /* CollectionFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionFooterView.swift; sourceTree = "<group>"; };
@@ -78,6 +77,7 @@
 		F36B7319219195230078A5E0 /* CollectionViewDemo3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDemo3.swift; sourceTree = "<group>"; };
 		F36B731A219195230078A5E0 /* CollectionViewDemo3.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewDemo3.xib; sourceTree = "<group>"; };
 		F36B731E219195D40078A5E0 /* CustomFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFlowLayout.swift; sourceTree = "<group>"; };
+		F36B73212191A1400078A5E0 /* TableViewDemoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDemoList.swift; sourceTree = "<group>"; };
 		F37B2E92218FD293006C7E01 /* ImportHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -205,14 +205,22 @@
 			path = "自定义布局文件";
 			sourceTree = "<group>";
 		};
+		F36B73202191A11F0078A5E0 /* 入口 */ = {
+			isa = PBXGroup;
+			children = (
+				F36B73212191A1400078A5E0 /* TableViewDemoList.swift */,
+			);
+			path = "入口";
+			sourceTree = "<group>";
+		};
 		F37B2E85218FD05F006C7E01 /* TableViewAdapterDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F36B73202191A11F0078A5E0 /* 入口 */,
 				F30E5C8D21904AE700D3C57F /* View */,
 				F30E5C7E219037E900D3C57F /* TableViewDemo1.swift */,
 				F30E5C7F219037E900D3C57F /* TableViewDemo1.xib */,
 				F30E5C9621904BF300D3C57F /* TableViewDemo2.swift */,
-				F30E5C9721904BF300D3C57F /* TableViewDemo2.xib */,
 			);
 			path = TableViewAdapterDemo;
 			sourceTree = "<group>";
@@ -307,7 +315,6 @@
 				F327F17A21899F04002B502D /* Assets.xcassets in Resources */,
 				F30E5C8C2190435A00D3C57F /* CollectionCell1.xib in Resources */,
 				F30E5C9F219061C200D3C57F /* CollectionHeaderView.xib in Resources */,
-				F30E5C9921904BF300D3C57F /* TableViewDemo2.xib in Resources */,
 				F36B731C219195230078A5E0 /* CollectionViewDemo3.xib in Resources */,
 				F30E5CA32190620500D3C57F /* CollectionFooterView.xib in Resources */,
 				F30E5C8721903C2B00D3C57F /* CollectionViewDemo1.xib in Resources */,
@@ -377,6 +384,7 @@
 				F327F17521899F03002B502D /* ViewController.swift in Sources */,
 				F30E5C80219037E900D3C57F /* TableViewDemo1.swift in Sources */,
 				F327F17321899F03002B502D /* AppDelegate.swift in Sources */,
+				F36B73222191A1400078A5E0 /* TableViewDemoList.swift in Sources */,
 				F36B730D21917EAB0078A5E0 /* CollectionDemoList.swift in Sources */,
 				F36B730A21917D370078A5E0 /* AdapterUtil.swift in Sources */,
 				F30E5C9321904B6B00D3C57F /* TableHeaderView.swift in Sources */,

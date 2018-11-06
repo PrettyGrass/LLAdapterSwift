@@ -14,8 +14,8 @@ class TableViewDemo1: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "自定义cell"
         configTab()
-        
     }
     
     func configTab() -> Void {
@@ -23,41 +23,43 @@ class TableViewDemo1: UITableViewController {
         adapter = LLTableViewAdapter(TableView: tableView)
         let section1 = adapter!.buildAddNewSection()
         
+        let headerCell = LLTableSectionReusableCell()
+        headerCell.cellClazz = TableHeaderView.self
+        headerCell.cellHeight = 40
         
-        let pushCloseSure = {(targetVC: UIViewController) -> Void in
-            self.navigationController?.pushViewController(targetVC, animated: true)
-        }
+        let footerCell = LLTableSectionReusableCell()
+        footerCell.cellClazz = TableFooterView.self
+        footerCell.cellHeight = 30
         
-        let cell1 = _creatCell(Section: section1, cellHeight:60, text: "自定义cell")
+        section1.sectionHeaderView = headerCell
+        section1.sectionFooterView = footerCell
+        
+        let cell1 = _creatCell(Section: section1, cellHeight:100, text: "第一组:cell1")
         cell1.separatorInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-        cell1.cellClick = {(cell,indexPath) in
-            let demoVC = TableViewDemo2(nibName: "TableViewDemo2", bundle: nil)
-            pushCloseSure(demoVC)
-        }
-        cell1.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
-
-        let cell2 = _creatCell(Section: section1, cellHeight:60, text: "tableViewHeaderView的使用")
-        cell2.separatorInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 10)
-        cell2.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
-
-        let cell3 = _creatCell(Section: section1, cellHeight:60, text: "tableView的可编辑 移动")
-        cell3.separatorInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
-        cell3.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
+        cell1.accessoryType = UITableViewCell.AccessoryType.checkmark
         
-        let cell4 = _creatCell(Section: section1, cellHeight:60, text: "tableView 通讯录列表")
-        cell4.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 10)
+        let section2 = adapter!.buildAddNewSection()
+        section2.sectionHeaderView = headerCell
+        section2.sectionFooterView = footerCell
+        
+        let cell2 = _creatCell(Section: section2, cellHeight:150, text: "第二组:cell1")
+        cell2.separatorInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 10)
+        cell2.accessoryType = UITableViewCell.AccessoryType.detailButton
         adapter?.reloadData()
     }
     
     func _creatCell(Section: LLTableSection, cellHeight: CGFloat , text: String) -> LLTableCell {
         let cell = Section.buildAddCell()
         cell.cellHeight = cellHeight
-        cell.cellClazz = UITableViewCell.self
-        cell.loadType = .origin
+        cell.cellClazz = TableCell1.self
+        cell.loadType = .nib
+        cell.cellNibName = "TableCell1"
         cell.text = text
         cell.separatorStyle = .inner
+        cell.cellClick = {(cell,indexPath) in
+            self.adapter?.reloadData()
+        }
         return cell
     }
-  
-    
+   
 }

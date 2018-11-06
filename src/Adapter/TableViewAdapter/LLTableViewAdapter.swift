@@ -139,24 +139,19 @@ extension LLTableViewAdapter {
     }
     
     public func sectionIndexTitles(for tableView: UITableView) -> [String]? {
-        #warning("暂未实现完")
-        guard let dataSource = self.dataSourceDelegate else {
-            return nil
-        }
-        return nil
+       return self.dataSourceDelegate?.sectionIndexTitles?(for: tableView)
     }
     
-    public func tableView(_: UITableView, sectionForSectionIndexTitle _: String, at _: Int) -> Int {
-        #warning("暂未实现完")
-        return 0
+    public func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
+       return self.dataSourceDelegate?.tableView?(tableView, sectionForSectionIndexTitle: title, at: index) ?? 0
     }
     
-    public func tableView(_: UITableView, commit _: UITableViewCell.EditingStyle, forRowAt _: IndexPath) {
-        #warning("暂未实现完")
+    public func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        self.dataSourceDelegate?.tableView?(tableView, commit: editingStyle, forRowAt: indexPath)
     }
     
-    public func tableView(_: UITableView, moveRowAt _: IndexPath, to _: IndexPath) {
-        #warning("暂未实现完")
+    public func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        self.dataSourceDelegate?.tableView?(tableView, moveRowAt: sourceIndexPath, to: destinationIndexPath)
     }
 }
 
@@ -230,35 +225,63 @@ extension LLTableViewAdapter {
 
 extension LLTableViewAdapter {
     
-    public func scrollViewDidScroll(_: UIScrollView) {}
-    
-    public func scrollViewDidZoom(_: UIScrollView) {}
-    
-    public func scrollViewWillBeginDragging(_: UIScrollView) {}
-    
-    public func scrollViewWillEndDragging(_: UIScrollView, withVelocity _: CGPoint, targetContentOffset _: UnsafeMutablePointer<CGPoint>) {}
-    
-    public  func scrollViewDidEndDragging(_: UIScrollView, willDecelerate _: Bool) {}
-    
-    public func scrollViewWillBeginDecelerating(_: UIScrollView) {}
-    
-    public func scrollViewDidEndDecelerating(_: UIScrollView) {}
-    
-    public  func scrollViewDidEndScrollingAnimation(_: UIScrollView) {}
-    
-    public  func viewForZooming(in _: UIScrollView) -> UIView? {
-        return nil
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        self.tableViewDelegate?.scrollViewDidScroll?(scrollView)
     }
     
-    public func scrollViewWillBeginZooming(_: UIScrollView, with _: UIView?) {}
-    
-    public  func scrollViewDidEndZooming(_: UIScrollView, with _: UIView?, atScale _: CGFloat) {}
-    
-    public  func scrollViewShouldScrollToTop(_: UIScrollView) -> Bool {
-        return false
+    public func scrollViewDidZoom(_ scrollView: UIScrollView) {
+        self.tableViewDelegate?.scrollViewDidZoom?(scrollView)
     }
     
-    public  func scrollViewDidScrollToTop(_: UIScrollView) {}
+    public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        self.tableViewDelegate?.scrollViewWillBeginDragging?(scrollView)
+    }
     
-    public func scrollViewDidChangeAdjustedContentInset(_: UIScrollView) {}
+    public func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        self.tableViewDelegate?.scrollViewWillEndDragging?(scrollView, withVelocity: velocity, targetContentOffset: targetContentOffset)
+    }
+
+    public func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        self.tableViewDelegate?.scrollViewDidEndDragging?(scrollView, willDecelerate: decelerate)
+    }
+    
+    public func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView)  {
+        self.tableViewDelegate?.scrollViewWillBeginDecelerating?(scrollView)
+    }
+    
+
+    public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        self.tableViewDelegate?.scrollViewDidEndDecelerating?(scrollView)
+    }
+    
+    public func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+        self.tableViewDelegate?.scrollViewDidEndScrollingAnimation?(scrollView)
+    }
+    
+    public func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return self.tableViewDelegate?.viewForZooming?(in: scrollView)
+    }
+ 
+    public func scrollViewWillBeginZooming(_ scrollView: UIScrollView, with view: UIView?) {
+        self.tableViewDelegate?.scrollViewWillBeginZooming?(scrollView, with: view)
+    }
+
+    public func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
+        self.tableViewDelegate?.scrollViewDidEndZooming?(scrollView, with: view, atScale: scale)
+    }
+    
+    public func scrollViewShouldScrollToTop(_ scrollView: UIScrollView) -> Bool {
+       return self.tableViewDelegate?.scrollViewShouldScrollToTop?(scrollView) ?? false
+    }
+
+    public func scrollViewDidScrollToTop(_ scrollView: UIScrollView) {
+        self.tableViewDelegate?.scrollViewDidScrollToTop?(scrollView)
+    }
+
+    @available(iOS 11.0, *)
+    public func scrollViewDidChangeAdjustedContentInset(_ scrollView: UIScrollView) {
+        self.tableViewDelegate?.scrollViewDidChangeAdjustedContentInset?(scrollView)
+        
+    }
+
 }

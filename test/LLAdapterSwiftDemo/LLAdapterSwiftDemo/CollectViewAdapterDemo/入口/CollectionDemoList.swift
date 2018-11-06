@@ -12,12 +12,12 @@ class CollectionDemoList: BaseListViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = "LLCollectionAdapter的基础使用"
     }
     
     override func configCells() {
-     
-       let section =  self.adapter!.buildAddNewSection()
+        
+        let section =  self.adapter!.buildAddNewSection()
         
         let pushCloseSure = {(targetVC: UIViewController) -> Void in
             self.navigationController?.pushViewController(targetVC, animated: true)
@@ -37,9 +37,6 @@ class CollectionDemoList: BaseListViewController {
             let demoVC = CollectionViewDemo3(nibName: "CollectionViewDemo3", bundle: nil)
             pushCloseSure(demoVC)
         }
-        
-        
         adapter?.reloadData()
-        
     }
 }
