@@ -52,8 +52,7 @@ class ViewController: UIViewController {
         cell2.separatorInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 10)
         cell2.accessoryType = UITableViewCell.AccessoryType.detailButton
         cell2.cellClick = {(cell,indexPath) in
-            let demoVC = CollectionViewDemo1(nibName: "CollectionViewDemo1", bundle: nil)
-            pushCloseSure(demoVC)
+            pushCloseSure(CollectionDemoList())
         }
         adapter?.reloadData()
     }

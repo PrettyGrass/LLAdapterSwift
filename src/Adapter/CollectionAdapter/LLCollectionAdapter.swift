@@ -81,15 +81,15 @@ extension LLCollectionAdapter {
 
 extension LLCollectionAdapter {
     
-  public  func numberOfSections(in collectionView: UICollectionView) -> Int {
+    public  func numberOfSections(in collectionView: UICollectionView) -> Int {
         return sections.count
     }
     
-  public  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return sections[section].cells.count
     }
     
-   public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let model = sections[indexPath.section].cells[indexPath.row]
         
         switch model.loadType {

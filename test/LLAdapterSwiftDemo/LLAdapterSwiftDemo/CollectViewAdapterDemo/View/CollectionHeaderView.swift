@@ -14,7 +14,6 @@ class CollectionHeaderView: UICollectionReusableView {
         super.awakeFromNib()
     }
     
-
     override func ll_updateUI() {
         print("CollectionHeaderView",self.ll_model)
     }
