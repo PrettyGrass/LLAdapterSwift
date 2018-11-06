@@ -131,11 +131,11 @@ extension LLTableViewAdapter {
     }
     
     public func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return false
+        return self.dataSourceDelegate?.tableView?(tableView, canEditRowAt: indexPath) ?? false
     }
     
     public func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        return false
+        return self.dataSourceDelegate?.tableView?(tableView, canMoveRowAt: indexPath) ?? false
     }
     
     public func sectionIndexTitles(for tableView: UITableView) -> [String]? {
@@ -218,9 +218,147 @@ extension LLTableViewAdapter {
         return headerFooterView
     }
     
-    public func tableView(_: UITableView, editingStyleForRowAt _: IndexPath) -> UITableViewCell.EditingStyle {
-        return UITableViewCell.EditingStyle.none
-    }
+//    public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//        self.tableViewDelegate?.tableView?(tableView, willDisplay: cell, forRowAt: indexPath)
+//    }
+//
+//    public func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+//        self.tableViewDelegate?.tableView?(tableView, willDisplayHeaderView: view, forSection: section)
+//    }
+//
+//    public func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
+//        self.tableViewDelegate?.tableView?(tableView, willDisplayFooterView: view, forSection: section)
+//    }
+//
+//    public func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//        self.tableViewDelegate?.tableView?(tableView, didEndDisplaying: cell, forRowAt: indexPath)
+//    }
+//
+//    public func tableView(_ tableView: UITableView, didEndDisplayingHeaderView view: UIView, forSection section: Int) {
+//        self.tableViewDelegate?.tableView?(tableView, didEndDisplayingHeaderView: view, forSection: section)
+//    }
+//
+//    public func tableView(_ tableView: UITableView, didEndDisplayingFooterView view: UIView, forSection section: Int) {
+//        self.tableViewDelegate?.tableView?(tableView, didEndDisplayingFooterView: view, forSection: section)
+//    }
+//
+//    public func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return self.tableViewDelegate?.tableView?(tableView, estimatedHeightForRowAt: indexPath) ?? 0
+//    }
+//
+//    public func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
+//        return self.tableViewDelegate?.tableView?(tableView, estimatedHeightForHeaderInSection: section) ?? 0
+//    }
+//
+//    public func tableView(_ tableView: UITableView, estimatedHeightForFooterInSection section: Int) -> CGFloat {
+//        return self.tableViewDelegate?.tableView?(tableView, estimatedHeightForFooterInSection: section) ?? 0
+//    }
+//
+//    public func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+//        self.tableViewDelegate?.tableView?(tableView, accessoryButtonTappedForRowWith: indexPath)
+//    }
+//
+//    public func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+//        return self.tableViewDelegate?.tableView?(tableView, shouldHighlightRowAt: indexPath) ?? false
+//    }
+//
+//    public func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
+//        self.tableViewDelegate?.tableView?(tableView, didHighlightRowAt: indexPath)
+//    }
+//
+//    public func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
+//        self.tableViewDelegate?.tableView?(tableView, didUnhighlightRowAt: indexPath)
+//    }
+//
+//    public func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+//        return self.tableViewDelegate?.tableView?(tableView, willSelectRowAt: indexPath)
+//    }
+//
+//    public func tableView(_ tableView: UITableView, willDeselectRowAt indexPath: IndexPath) -> IndexPath? {
+//        return self.tableViewDelegate?.tableView?(tableView, willDeselectRowAt: indexPath)
+//    }
+//
+//    public func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+//       return self.tableViewDelegate?.tableView?(tableView, editingStyleForRowAt: indexPath) ?? UITableViewCell.EditingStyle.none
+//    }
+//
+//    public func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String {
+//       return self.tableViewDelegate?.tableView?(tableView, titleForDeleteConfirmationButtonForRowAt: indexPath) ?? ""
+//    }
+//
+//    public func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+//
+//    }
+//
+//    @available(iOS 11.0, *)
+//    public func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+//
+//    }
+//
+//    @available(iOS 11.0, *)
+//    public func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+//
+//    }
+//
+//    public func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
+//
+//    }
+//
+//    public func tableView(_ tableView: UITableView, willBeginEditingRowAt indexPath: IndexPath) {
+//
+//    }
+//
+//    public func tableView(_ tableView: UITableView, didEndEditingRowAt indexPath: IndexPath?) {
+//
+//    }
+//
+//     public func tableView(_ tableView: UITableView, targetIndexPathForMoveFromRowAt sourceIndexPath: IndexPath, toProposedIndexPath proposedDestinationIndexPath: IndexPath) -> IndexPath
+//     {
+//
+//    }
+//
+//    public func tableView(_ tableView: UITableView, indentationLevelForRowAt indexPath: IndexPath) -> Int {
+//
+//    }
+//
+//    public func tableView(_ tableView: UITableView, shouldShowMenuForRowAt indexPath: IndexPath) -> Bool {
+//
+//    }
+//
+//    public func tableView(_ tableView: UITableView, canPerformAction action: Selector, forRowAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
+//
+//    }
+//
+//    public func tableView(_ tableView: UITableView, performAction action: Selector, forRowAt indexPath: IndexPath, withSender sender: Any?) {
+//
+//    }
+//
+//    @available(iOS 9.0, *)
+//    public func tableView(_ tableView: UITableView, canFocusRowAt indexPath: IndexPath) -> Bool {
+//
+//    }
+//
+//    @available(iOS 9.0, *)
+//    public func tableView(_ tableView: UITableView, shouldUpdateFocusIn context: UITableViewFocusUpdateContext) -> Bool {
+//
+//    }
+//
+//    @available(iOS 9.0, *)
+//    public func tableView(_ tableView: UITableView, didUpdateFocusIn context: UITableViewFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
+//
+//    }
+//
+//    @available(iOS 9.0, *)
+//    public func indexPathForPreferredFocusedView(in tableView: UITableView) -> IndexPath? {
+//
+//    }
+//
+//    @available(iOS 11.0, *)
+//    public func tableView(_ tableView: UITableView, shouldSpringLoadRowAt indexPath: IndexPath, with context: UISpringLoadedInteractionContext) -> Bool {
+//
+//    }
+    
+    
 }
 
 extension LLTableViewAdapter {
