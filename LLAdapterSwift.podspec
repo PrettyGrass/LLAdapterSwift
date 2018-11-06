@@ -8,7 +8,7 @@ s.homepage     = 'https://github.com/orgs/PrettyGrass'
 s.license      = 'COMMERCIAL'
 s.author       = { 'renxun' => '490282258@qq.com' }
 s.platform     = :ios, '8.0'
-s.source       = { :git => "git@github.com:PrettyGrass/AdapterSwift.git", :branch => s.version.to_s }
+s.source       = { :git => "git@github.com:PrettyGrass/LLAdapterSwift.git", :branch => s.version.to_s }
 s.requires_arc = true
 
 s.source_files = 'src/**/*.swift' # 源码文件
