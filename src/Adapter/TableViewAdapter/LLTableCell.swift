@@ -42,7 +42,7 @@ public class LLTableCell: NSObject, LLAdapterCellProtocol {
     public var accessoryType = UITableViewCell.AccessoryType.none
 
     /// 选中的样式
-    public var selectionStyle = UITableViewCell.SelectionStyle.none
+    public var selectionStyle = UITableViewCell.SelectionStyle.default
 
     /// 去选样式
     public var deSelectionStyle = LLDeSelectionStyle.now
