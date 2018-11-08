@@ -12,7 +12,10 @@ public class LLCollectionAdapter:NSObject, LLAdapterProtocol,UICollectionViewDat
     
     /// 获取适配器中所有组
     public var sections: [LLCollectionSection] = []
-  
+
+    public weak var collectionViewDelegate: UICollectionViewDelegate?
+    public weak var dataSourceDelegate: UICollectionViewDataSource?
+
     weak var collectionView: UICollectionView? {
         didSet {
             collectionView?.delegate = self
@@ -161,4 +164,65 @@ extension LLCollectionAdapter {
     
 }
 
-
+extension LLCollectionAdapter {
+    
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        self.collectionViewDelegate?.scrollViewDidScroll?(scrollView)
+    }
+    
+    public func scrollViewDidZoom(_ scrollView: UIScrollView) {
+        self.collectionViewDelegate?.scrollViewDidZoom?(scrollView)
+    }
+    
+    public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        self.collectionViewDelegate?.scrollViewWillBeginDragging?(scrollView)
+    }
+    
+    public func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        self.collectionViewDelegate?.scrollViewWillEndDragging?(scrollView, withVelocity: velocity, targetContentOffset: targetContentOffset)
+    }
+    
+    public func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        self.collectionViewDelegate?.scrollViewDidEndDragging?(scrollView, willDecelerate: decelerate)
+    }
+    
+    public func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView)  {
+        self.collectionViewDelegate?.scrollViewWillBeginDecelerating?(scrollView)
+    }
+    
+    
+    public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        self.collectionViewDelegate?.scrollViewDidEndDecelerating?(scrollView)
+    }
+    
+    public func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+        self.collectionViewDelegate?.scrollViewDidEndScrollingAnimation?(scrollView)
+    }
+    
+    public func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return self.collectionViewDelegate?.viewForZooming?(in: scrollView)
+    }
+    
+    public func scrollViewWillBeginZooming(_ scrollView: UIScrollView, with view: UIView?) {
+        self.collectionViewDelegate?.scrollViewWillBeginZooming?(scrollView, with: view)
+    }
+    
+    public func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
+        self.collectionViewDelegate?.scrollViewDidEndZooming?(scrollView, with: view, atScale: scale)
+    }
+    
+    public func scrollViewShouldScrollToTop(_ scrollView: UIScrollView) -> Bool {
+        return self.collectionViewDelegate?.scrollViewShouldScrollToTop?(scrollView) ?? false
+    }
+    
+    public func scrollViewDidScrollToTop(_ scrollView: UIScrollView) {
+        self.collectionViewDelegate?.scrollViewDidScrollToTop?(scrollView)
+    }
+    
+    @available(iOS 11.0, *)
+    public func scrollViewDidChangeAdjustedContentInset(_ scrollView: UIScrollView) {
+        self.collectionViewDelegate?.scrollViewDidChangeAdjustedContentInset?(scrollView)
+        
+    }
+    
+}

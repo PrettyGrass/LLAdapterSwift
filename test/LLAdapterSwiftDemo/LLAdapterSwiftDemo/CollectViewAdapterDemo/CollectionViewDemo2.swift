@@ -23,6 +23,7 @@ class CollectionViewDemo2: UIViewController {
     func configCells() {
         
         adapter = LLFlowCollectViewAdapter(collectionView: collectionView)
+        adapter?.collectionViewDelegate = self
         let section = adapter!.buildAddNewSection()
         
         //section头,section尾
@@ -56,5 +57,12 @@ class CollectionViewDemo2: UIViewController {
             }
         }
         adapter?.reloadData()
+    }
+}
+
+extension CollectionViewDemo2: UICollectionViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print("scrollViewDidScroll")
     }
 }
