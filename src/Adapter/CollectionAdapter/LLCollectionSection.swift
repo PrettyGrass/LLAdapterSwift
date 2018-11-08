@@ -10,14 +10,14 @@ import UIKit
 
 public class LLCollectionSection: LLSectionProtocol {
     
-    public typealias LLSectionHeaderType = LLCollectionViewReusableCell
-    public typealias LLSectionFooterType = LLCollectionViewReusableCell
+    public typealias LLSectionHeaderType = LLCollectionCell
+    public typealias LLSectionFooterType = LLCollectionCell
     public typealias LLCellType = LLCollectionCell
     
     public var cells: [LLCollectionCell] = []
     
-    public var sectionHeaderView: LLCollectionViewReusableCell?
-    public var sectionFooterView: LLCollectionViewReusableCell?
+    public var sectionHeaderView: LLCollectionCell?
+    public var sectionFooterView: LLCollectionCell?
     
     public var sectionIndex: Int?
     

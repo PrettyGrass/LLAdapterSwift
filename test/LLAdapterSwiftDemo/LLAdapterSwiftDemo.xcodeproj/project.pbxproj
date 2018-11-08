@@ -43,8 +43,6 @@
 /* Begin PBXFileReference section */
 		12A8F3E48E84B84BE5B60EE8 /* Pods_LLAdapterSwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LLAdapterSwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C79940CAA298FA77EB4E111 /* Pods-LLAdapterSwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLAdapterSwiftDemo.release.xcconfig"; path = "Target Support Files/Pods-LLAdapterSwiftDemo/Pods-LLAdapterSwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
-		4EF83258A1D31DBBEFC5A5F6 /* Pods-LLAdapterSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLAdapterSwift.debug.xcconfig"; path = "Target Support Files/Pods-LLAdapterSwift/Pods-LLAdapterSwift.debug.xcconfig"; sourceTree = "<group>"; };
-		55253E8FC22B8D626B848242 /* Pods-LLAdapterSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLAdapterSwift.release.xcconfig"; path = "Target Support Files/Pods-LLAdapterSwift/Pods-LLAdapterSwift.release.xcconfig"; sourceTree = "<group>"; };
 		B3E638117007BD0811527B84 /* Pods_LLAdapterSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LLAdapterSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5F516C0CE027125F514E71 /* Pods-LLAdapterSwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLAdapterSwiftDemo.debug.xcconfig"; path = "Target Support Files/Pods-LLAdapterSwiftDemo/Pods-LLAdapterSwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		F30E5C7E219037E900D3C57F /* TableViewDemo1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDemo1.swift; sourceTree = "<group>"; };
@@ -105,8 +103,6 @@
 		602C6D073BDAD2008EED62BB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4EF83258A1D31DBBEFC5A5F6 /* Pods-LLAdapterSwift.debug.xcconfig */,
-				55253E8FC22B8D626B848242 /* Pods-LLAdapterSwift.release.xcconfig */,
 				BF5F516C0CE027125F514E71 /* Pods-LLAdapterSwiftDemo.debug.xcconfig */,
 				1C79940CAA298FA77EB4E111 /* Pods-LLAdapterSwiftDemo.release.xcconfig */,
 			);
@@ -332,7 +328,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LLAdapterSwiftDemo/Pods-LLAdapterSwiftDemo-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-LLAdapterSwiftDemo/Pods-LLAdapterSwiftDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/LLAdapterSwift/LLAdapterSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
@@ -343,7 +339,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LLAdapterSwiftDemo/Pods-LLAdapterSwiftDemo-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LLAdapterSwiftDemo/Pods-LLAdapterSwiftDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AEBA5C55037D9FB82F7993D9 /* [CP] Check Pods Manifest.lock */ = {

@@ -12,9 +12,9 @@
         static var CellModelKey = "CellModelKey"
     }
     
-    public var ll_model: LLCollectionViewReusableCell? {
+    public var ll_model: LLCollectionCell? {
         get {
-            return objc_getAssociatedObject(self, &AssociatedKeys.CellModelKey) as? LLCollectionViewReusableCell
+            return objc_getAssociatedObject(self, &AssociatedKeys.CellModelKey) as? LLCollectionCell
         }
         set {
             objc_setAssociatedObject(self, &AssociatedKeys.CellModelKey,

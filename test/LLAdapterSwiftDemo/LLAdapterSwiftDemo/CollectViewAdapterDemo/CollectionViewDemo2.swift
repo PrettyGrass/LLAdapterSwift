@@ -26,8 +26,8 @@ class CollectionViewDemo2: UIViewController {
         let section = adapter!.buildAddNewSection()
         
         //section头,section尾
-        let headerCell = LLCollectionViewReusableCell()
-        let footerCell = LLCollectionViewReusableCell()
+        let headerCell = LLCollectionCell()
+        let footerCell = LLCollectionCell()
         
         headerCell.loadType = LLCellLoadType.nib
         headerCell.cellClazz = CollectionHeaderView.self

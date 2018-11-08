@@ -15,6 +15,7 @@ class CollectionHeaderView: UICollectionReusableView {
     }
     
     override func ll_updateUI() {
+        super.ll_updateUI()
         print("CollectionHeaderView",self.ll_model)
     }
     

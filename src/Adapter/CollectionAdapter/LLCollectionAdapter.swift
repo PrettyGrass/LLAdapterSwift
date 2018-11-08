@@ -93,6 +93,8 @@ extension LLCollectionAdapter {
         let model = sections[indexPath.section].cells[indexPath.row]
         
         switch model.loadType {
+        case .inner:
+            break
         case .nib:
             collectionView.register(UINib(nibName: model.cellNibName!,
                                           bundle: nil),
@@ -103,7 +105,7 @@ extension LLCollectionAdapter {
         }
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier:model.cellIdentity,for: indexPath)
-        cell.model = model
+        cell.ll_model = model
         return cell
     }
 }
@@ -129,7 +131,7 @@ extension LLCollectionAdapter {
     public func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         let section = self.sections[indexPath.section]
-        let reusableCell: LLCollectionViewReusableCell?
+        let reusableCell: LLCollectionCell?
         
         if kind == UICollectionView.elementKindSectionHeader {
             reusableCell = section.sectionHeaderView
@@ -142,7 +144,7 @@ extension LLCollectionAdapter {
         
         switch reusableCell!.loadType {
         case LLCellLoadType.inner:
-            print("暂未实现")
+            //print("暂未实现")
             break
         case LLCellLoadType.nib:
             let reusableNib = UINib(nibName: reusableCell!.cellNibName!, bundle: nil)

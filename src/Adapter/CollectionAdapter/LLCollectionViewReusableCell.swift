@@ -1,5 +1,5 @@
 //
-//  LLCollectionViewReusablecell.swift
+//  LLCollectionCell.swift
 //  LLAdapterSwift
 //
 //  Created by renxun on 2018/11/2.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class LLCollectionViewReusableCell: LLCollectionCell {
-    
-
-}
+//public class LLCollectionCell: LLCollectionCell {
+//    
+//
+//}

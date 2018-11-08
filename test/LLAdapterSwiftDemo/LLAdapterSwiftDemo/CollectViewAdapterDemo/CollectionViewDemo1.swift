@@ -33,8 +33,8 @@ class CollectionViewDemo1: UIViewController {
         
         let section1 = adapter?.buildAddNewSection()
         
-        let headerCell = LLCollectionViewReusableCell()
-        let footerCell = LLCollectionViewReusableCell()
+        let headerCell = LLCollectionCell()
+        let footerCell = LLCollectionCell()
         
         headerCell.loadType = LLCellLoadType.nib
         headerCell.cellClazz = CollectionHeaderView.self

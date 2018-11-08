@@ -17,7 +17,7 @@ class CollectionCell1: UICollectionViewCell {
     }
 
     override func ll_updateUI() {
-        print(self.model)
+        print(self.ll_model)
     }
     
 //    override func ll_updateUI() {
