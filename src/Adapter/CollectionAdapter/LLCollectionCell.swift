@@ -31,7 +31,17 @@ public class LLCollectionCell: NSObject,LLAdapterCellProtocol {
     
     public var indexPath: IndexPath?
     
-    public var cellNibName: String?
+    var _cellNibName: String?
+    public var cellNibName: String?  {
+        get {
+            if let id = _cellNibName {
+                return id
+            }
+            return (self.cellClazz as! NSObject.Type).ll_className()
+        } set {
+            _cellNibName = newValue
+        }
+    }
     
     public var loadType: LLCellLoadType = LLCellLoadType.origin
     
