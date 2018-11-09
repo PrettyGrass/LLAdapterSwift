@@ -180,9 +180,9 @@ open class LLWaterFlowLayout: UICollectionViewFlowLayout {
     
     open override var collectionViewContentSize: CGSize {
         get {
-            if (self.contentHeight + self.edgeInsets.bottom) < UIScreen.main.bounds.height {
-                return UIScreen.main.bounds.size
-            }
+            //if (self.contentHeight + self.edgeInsets.bottom) < UIScreen.main.bounds.height {
+            //    return UIScreen.main.bounds.size
+            //}
             return CGSize(width: 0, height: self.contentHeight + self.edgeInsets.bottom)
         }
     }
