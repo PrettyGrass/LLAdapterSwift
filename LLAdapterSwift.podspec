@@ -12,7 +12,7 @@ s.source       = { :git => "git@github.com:PrettyGrass/LLAdapterSwift.git", :bra
 s.requires_arc = true
 
 s.source_files = 'src/**/*.swift' # 源码文件
-s.dependency 'SnapKit', '4.2.0'
+s.dependency 'SnapKit' #, '4.2.0'
 
 end
 
