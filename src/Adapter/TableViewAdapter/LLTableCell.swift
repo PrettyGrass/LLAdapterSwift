@@ -9,11 +9,11 @@
 import UIKit
 
 open class LLTableCell: NSObject, LLAdapterCellProtocol {
-    var data: Any?
+    public var data: Any?
 
     public var kvcExt: [String: Any]?
 
-    var indexPath: IndexPath?
+    public var indexPath: IndexPath?
 
     public var cellClazz: AnyClass = UITableViewCell.self
 

@@ -65,7 +65,7 @@ public protocol LLSectionProtocol {
      func buildAddCell(CellClass clazz: AnyClass) -> LLCellType
 }
 
-protocol LLAdapterCellProtocol {
+public protocol LLAdapterCellProtocol {
     /// 数据: 支持结构体,枚举等任何类型
      var data :Any? {get set}
     /// kvc 透传数据
