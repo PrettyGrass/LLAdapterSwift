@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class LLTableCell: NSObject, LLAdapterCellProtocol {
+open class LLTableCell: NSObject, LLAdapterCellProtocol {
     var data: Any?
 
     public var kvcExt: [String: Any]?
