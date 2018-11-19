@@ -183,7 +183,6 @@ open class LLWaterFlowLayout: UICollectionViewFlowLayout {
             //if (self.contentHeight + self.edgeInsets.bottom) < UIScreen.main.bounds.height {
             //    return UIScreen.main.bounds.size
             //}
-            debugPrint("self.contentHeight:\(self.contentHeight)")
             return CGSize(width: 0, height: self.contentHeight + self.edgeInsets.bottom)
         }
     }
