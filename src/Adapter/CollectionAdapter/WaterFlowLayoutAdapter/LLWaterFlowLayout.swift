@@ -183,6 +183,7 @@ open class LLWaterFlowLayout: UICollectionViewFlowLayout {
             //if (self.contentHeight + self.edgeInsets.bottom) < UIScreen.main.bounds.height {
             //    return UIScreen.main.bounds.size
             //}
+            debugPrint("self.contentHeight:\(self.contentHeight)")
             return CGSize(width: 0, height: self.contentHeight + self.edgeInsets.bottom)
         }
     }
@@ -210,5 +211,7 @@ extension LLWaterFlowLayout {
         }
         //清除之前所有的布局
         self.attrsArray.removeAll()
+        /// 重置内容高度
+        self.contentHeight = 0
     }
 }
