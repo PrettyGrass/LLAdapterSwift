@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class LLCollectionCell: NSObject,LLAdapterCellProtocol {
+open class LLCollectionCell: NSObject,LLAdapterCellProtocol {
     
     public var cellClazz: AnyClass = UICollectionViewCell.self
     
