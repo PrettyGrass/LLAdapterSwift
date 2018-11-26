@@ -10,11 +10,11 @@ import UIKit
 
 open class LLCollectionCell: NSObject,LLAdapterCellProtocol {
     
-    public var cellClazz: AnyClass = UICollectionViewCell.self
+    open var cellClazz: AnyClass = UICollectionViewCell.self
     
     private var _cellIdentity :String?
     
-    public var cellIdentity: String {
+    open var cellIdentity: String {
         get {
             if let id = _cellIdentity {
                 return id
@@ -25,14 +25,14 @@ open class LLCollectionCell: NSObject,LLAdapterCellProtocol {
         }
     }
     
-    public var data: Any?
+    open var data: Any?
     
-    public var kvcExt: [String : Any]?
+    open var kvcExt: [String : Any]?
     
-    public var indexPath: IndexPath?
+    open var indexPath: IndexPath?
     
     var _cellNibName: String?
-    public var cellNibName: String?  {
+    open var cellNibName: String?  {
         get {
             if let id = _cellNibName {
                 return id
@@ -43,20 +43,20 @@ open class LLCollectionCell: NSObject,LLAdapterCellProtocol {
         }
     }
     
-    public var loadType: LLCellLoadType = LLCellLoadType.origin
+    open var loadType: LLCellLoadType = LLCellLoadType.origin
     
     /// 图片名字或者URL
-    public var image: Any?
+    open var image: Any?
     /// 标题
-    public var title = "";
+    open var title = "";
     /// 子标题
-    public var subTitle = "";
+    open var subTitle = "";
     
-    public var deSelectionStyle = LLDeSelectionStyle.none
+    open var deSelectionStyle = LLDeSelectionStyle.none
     
     /// item大小
-    public var itemSize: CGSize = CGSize.zero
+    open var itemSize: CGSize = CGSize.zero
     
-    public var cellClick :CollectionCellClick?
+    open var cellClick :CollectionCellClick?
     
 }
