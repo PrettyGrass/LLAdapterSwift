@@ -101,7 +101,7 @@ extension LLTableViewAdapter {
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = sections[indexPath.section].cells[indexPath.row]
-        var cell = tableView.dequeueReusableCell(withIdentifier: model.cellIdentity)
+        var cell: UITableViewCell? = nil
         if cell == nil {
             switch model.loadType {
             case LLCellLoadType.nib:
