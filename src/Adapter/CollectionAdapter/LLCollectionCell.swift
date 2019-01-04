@@ -27,7 +27,7 @@ open class LLCollectionCell: NSObject,LLAdapterCellProtocol {
     
     open var data: Any?
     
-    open var kvcExt: [String : Any]?
+    open var kvcExt: [String : Any] = [:]
     
     open var indexPath: IndexPath?
     

@@ -69,7 +69,7 @@ public protocol LLAdapterCellProtocol {
     /// 数据: 支持结构体,枚举等任何类型
      var data :Any? {get set}
     /// kvc 透传数据
-     var kvcExt: [String: Any]?  {get set}
+     var kvcExt: [String: Any]  {get set}
     /// 行索引信息
       var indexPath: IndexPath?  {get set}
     ///cell类

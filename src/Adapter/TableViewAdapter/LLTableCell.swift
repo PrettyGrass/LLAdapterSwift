@@ -11,7 +11,7 @@ import UIKit
 open class LLTableCell: NSObject, LLAdapterCellProtocol {
     public var data: Any?
 
-    public var kvcExt: [String: Any]?
+    public var kvcExt: [String: Any] = [:]
 
     public var indexPath: IndexPath?
 

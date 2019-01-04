@@ -108,6 +108,7 @@ extension LLCollectionAdapter {
         }
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier:model.cellIdentity,for: indexPath)
+        model.indexPath = indexPath
         cell.ll_model = model
         return cell
     }
@@ -157,6 +158,7 @@ extension LLCollectionAdapter {
         }
         
         let resableView :UICollectionReusableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: cellIdentity, for: indexPath)
+        reusableCell?.indexPath = indexPath
         resableView.ll_model = reusableCell
         return resableView
     }
