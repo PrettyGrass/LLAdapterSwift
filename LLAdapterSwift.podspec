@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
 s.name         = 'LLAdapterSwift'
-s.version      = '2.0.0'
+s.version      = '5.0.0'
 s.summary      = '列表适配器Swift版本'
 s.description  = '详细描述~'
 s.homepage     = 'https://github.com/orgs/PrettyGrass'

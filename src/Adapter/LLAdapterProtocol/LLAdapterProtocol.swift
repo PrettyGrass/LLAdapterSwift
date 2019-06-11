@@ -13,19 +13,19 @@ public protocol LLAdapterProtocol {
     
     associatedtype SectionType
     /// 获取适配器中所有组
-     var sections: [SectionType] { set get }
+    var sections: [SectionType] { set get }
     /// 刷新适配器
-     func reloadData() -> Void;
+    func reloadData() -> Void;
     
-     func buildAddNewSection() -> SectionType
+    func buildAddNewSection() -> SectionType
     
     func buildAddNewSection(Cell cell: SectionType) -> Void;
     
-     func addSection(Section section: SectionType) -> Void;
+    func addSection(Section section: SectionType) -> Void;
     
-     func insertSection(Section section: SectionType,index:Int) -> Void
+    func insertSection(Section section: SectionType,index:Int) -> Void
     
-     func removeSection(Section section: SectionType) -> Void
+    func removeSection(Section section: SectionType) -> Void
 }
 
 public protocol LLSectionProtocol {
